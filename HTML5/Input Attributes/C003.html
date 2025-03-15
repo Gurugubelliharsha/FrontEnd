@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Restrictions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+            text-align: left;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Form with Input Restrictions</h2>
+        <form>
+            <label for="readonly">Readonly Field:</label>
+            <input type="text" id="readonly" name="readonly" value="This is read-only" readonly>
+
+            <label for="disabled">Disabled Field:</label>
+            <input type="text" id="disabled" name="disabled" value="Cannot edit" disabled>
+
+            <label for="required">Required Field:</label>
+            <input type="text" id="required" name="required" placeholder="This is required" required>
+
+            <label for="maxlength">Max Length (5 characters):</label>
+            <input type="text" id="maxlength" name="maxlength" maxlength="5" placeholder="Max 5 chars">
+
+            <label for="min">Minimum Value (10):</label>
+            <input type="number" id="min" name="min" min="10" placeholder="Enter 10 or more">
+
+            <label for="max">Maximum Value (100):</label>
+            <input type="number" id="max" name="max" max="100" placeholder="Enter 100 or less">
+
+            <label for="size">Size (20 characters wide):</label>
+            <input type="text" id="size" name="size" size="20" placeholder="Fixed width">
+
+            <label for="value">Predefined Value:</label>
+            <input type="text" id="value" name="value" value="Preset value">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
